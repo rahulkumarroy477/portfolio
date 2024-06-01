@@ -23,6 +23,12 @@ html {
     overflow-x: hidden;
 }
 
+.chamaeleon{
+    display: inline-block;
+    background-position: center;
+    height: 30px;
+    width: 70px;
+}
 body {
     background: var(--bg-color);
     color: var(--text-color);
@@ -265,11 +271,11 @@ span{
     position: relative;
     border-radius: 2rem;
 }
-.portfolio-box img{
+.portfolio-box video{
     width: 100%;
     transition: .5s ease;
 }
-.portfolio-box:hover img{
+.portfolio-box:hover video{
     transform: scale(1.1);
 }
 .portfolio-box .portfolio-layer{
@@ -292,14 +298,14 @@ span{
     transform: translateY(0);
 }
 .portfolio-layer h4{
-    font-size: 3rem;
+    font-size: 2rem;
 }
 .portfolio-layer p{
     font-size: 1.5rem;
     margin: .3rem 0 1rem;
 }
 .portfolio-layer a{
-    display: inline-flex;
+    display: flex;
     align-items: center;
     justify-content: center;
     width: 5rem;
@@ -311,22 +317,26 @@ span{
     font-size: 2rem;
     color: var(--second-bg-color);
 }
+.clickable-links{
+    display: flex;
+    gap: 20px;
+}
 .contact h2{
     margin-bottom: 3rem;
 }
-.contact form{
+#form{
     max-width: 70rem;
     margin: 1rem auto;
     text-align: center;
     margin-bottom: 3rem;
 }
-.contact form .input-box{
+#form .input-box{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
-.contact form .input-box input,
-.contact form textarea
+#form .input-box input,
+#form textarea
 {
     width: 100%;
     padding: 1.5rem;
@@ -336,13 +346,13 @@ span{
     border-radius: .8rem;
     color: var(--text-color);
 }
-.contact form .input-box input{
+#form .input-box button{
     width: 49%;
 }
-.contact form textarea{
+#form textarea{
     resize: none;
 }
-.contact form .btn{
+#form .btn{
     margin-top: 2rem;
     cursor: pointer;
 }
@@ -474,7 +484,7 @@ span{
     html{
         font-size: 50%;
     }
-    .contact form .input-box input{
+    #form .input-box input{
         width: 100%;
     }
 }

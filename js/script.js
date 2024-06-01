@@ -42,15 +42,29 @@ ScrollReveal({
     delay:200
 });
 ScrollReveal().reveal('.home-content,.heading', { origin: 'top' });
-ScrollReveal().reveal('.home-img, .services-container, .portfolio-box, .contact form', { origin: 'bottom' });
+ScrollReveal().reveal('.home-img, .services-container, .portfolio-box, #form', { origin: 'bottom' });
 ScrollReveal().reveal('.home-content h1, .about-image', { origin: 'left' });
 ScrollReveal().reveal('.home-content p, .about-content', { origin: 'right' });
 
 // typed js
 var typed = new Typed('.multiple-text', {
-    strings: ['Frontend Developer!', 'Youtuber','Programmer'],
+    strings: ['Frontend Developer!', 'Backend Developer','Mern Developer'],
     typeSpeed:100,
     backSpeed:100,
     backDelay:1000,
     loop:true
   });
+
+function sendEmail(){
+    var params = {
+        from_name : document.getElementById('fullName').value,
+        email: document.getElementById('email').value,
+        phone: document.getElementById('phone').value,
+        subject: document.getElementById('subject').value,
+        message: document.getElementById('message').value
+    }
+    emailjs.send("service_vx7ji9w","template_1isf9sg",params)
+    .then(()=>{
+        alert("success");
+    });
+}

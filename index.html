@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,9 +10,17 @@
 
     <!-- custom css -->
     <link rel="stylesheet" href="./css/style.css">
-
-    <title>Document</title>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("NwpA4jkED6sPJYztT");
+        })();
+    </script>
+    <title>Portfolio</title>
+    <link rel="icon" href="./images/profile-photo-rahul.jpg" style="border-radius: 50%;" type="image/x-icon">
 </head>
+
 <body>
     <header class="header">
         <a href="#" class="logo">Portfolio</a>
@@ -30,15 +39,17 @@
             <h3>Hello, It's Me</h3>
             <h1>Rahul Kumar</h1>
             <h3>And I'm a <span class="multiple-text"></span></h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                Neque, illum. Sapiente nihil nam, beatae officiis expedita aliquid.</p>
+            <p>I am that Chamaeleon <span class="chamaeleon"><img src="./images/chamaelon.png"
+                        style="vertical-align: middle; width: 100%; height: 100%;"></span> which changes it's color
+                according to different situation
+                which makes me flexible in working in differnet environment and different tech stacks.</p>
             <div class="social-media">
                 <a href="https://github.com/rahulkumarroy477/"><i class='bx bxl-github'></i></a>
-                <a href="https://www.facebook.com/rahulnitpian25/"><i class='bx bxl-facebook' ></i></a>
-                <a href="https://www.instagram.com/itzz_only_rahul/"><i class='bx bxl-instagram-alt' ></i></a>
-                <a href="https://www.linkedin.com/in/rahul-kumar-66359b237/"><i class='bx bxl-linkedin' ></i></a>
+                <a href="https://www.facebook.com/rahulnitpian25/"><i class='bx bxl-facebook'></i></a>
+                <a href="https://www.instagram.com/itzz_only_rahul/"><i class='bx bxl-instagram-alt'></i></a>
+                <a href="https://www.linkedin.com/in/rahul-kumar-66359b237/"><i class='bx bxl-linkedin'></i></a>
             </div>
-            <a href="" class="btn">Download CV</a>
+            <a href="./docs/myResume.pdf" class="btn" download>Download CV</a>
         </div>
         <div class="home-img">
             <img src="./images/porfolio3rd.png" alt="">
@@ -53,8 +64,20 @@
         </div>
         <div class="about-content">
             <h2 class="heading">About <span>Me</span></h2>
-            <h3>Frontend Developer</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam iusto quidem distinctio consequatur laudantium ad iste quis, optio, facere numquam et, beatae cum ut voluptatibus. Id, totam hic. Aspernatur repudiandae cum consequuntur soluta sunt est? Rem, perferendis architecto. Pariatur repellendus natus maxime aspernatur rerum sed?</p>
+            <h3>if(!Frontend Developer) <br />
+                then Backend Developer</h3>
+            <p>
+                I enjoy tackling real-life projects because they provide practical challenges that stimulate my
+                problem-solving skills.
+                I am constantly on the lookout <img src="./images/search-icon.png" alt="Problem Discovery"
+                    style="vertical-align: middle; width: 30px; height: 22px;"> for new problems to solve. Once I
+                identify a problem, finding a solution <img src="./images/solution-icon.png" alt="Solution Finding"
+                    style="vertical-align: middle; width: 30px; height: 30px;"> becomes a manageable task that typically
+                takes just a few days of focused work.
+
+                I thrive on the process of discovery, analysis, and implementation, and I'm always ready to take on the
+                next challenge.
+            </p>
             <a href="#" class="btn">Read More</a>
         </div>
     </section>
@@ -66,22 +89,28 @@
             <div class="services-box">
                 <i class='bx bxl-dev-to'></i>
                 <h3>Web Development</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Nihil iste voluptatibus enim doloribus provident earum maxime officia cumque dignissimos modi?</p>
+                <p>I have created a variety of projects ranging from simple landing pages to complex full-stack
+                    applications, utilizing diverse tech stacks such as HTML, CSS, JavaScript, React
+                    for frontend; Node.js, Express for backend; MySQL, PostgreSQL,
+                    MongoDB, Firebase for databases; and DevOps tools like Docker.</p>
                 <a href="#" class="btn">Read More</a>
             </div>
             <div class="services-box">
-                <i class='bx bx-brain' ></i>
+                <i class='bx bx-brain'></i>
                 <h3>Machine Learning</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Nihil iste voluptatibus enim doloribus provident earum maxime officia cumque dignissimos modi?</p>
+                <p>I have created a variety of projects ranging from simple landing pages to complex full-stack
+                    applications, including systems like recommender systems and object detection models, utilizing
+                    variety of techstack like Python, Flask, Streamlit, Pandas, Numpy, YOLO object detection etc.</p>
                 <a href="#" class="btn">Read More</a>
             </div>
             <div class="services-box">
                 <i class='bx bx-code-alt'></i>
-                <h3>Competitive Programming</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Nihil iste voluptatibus enim doloribus provident earum maxime officia cumque dignissimos modi?</p>
+                <h3>Problem Solving</h3>
+                <p>I have solved many real-life problems using both web development and machine learning, as using only
+                    one of them is like not utilizing the resources to full extent looks waste to me.
+                    I generally focus on using free services more for small scale applications, but in future will work
+                    on it.
+                </p>
                 <a href="#" class="btn">Read More</a>
             </div>
         </div>
@@ -94,50 +123,88 @@
 
         <div class="portfolio-container">
             <div class="portfolio-box">
-                <img src="./images/weather-app.png" alt="">
+                <!-- <img src="./images/weather-app.png" alt="project 1"> -->
+                <video src="./videos/netflix-movie-recommender.mp4" loop muted autoplay></video>
                 <div class="portfolio-layer">
-                    <h4>Weather Forecasting Website</h4>
-                    <p>A weather app built with React can display current weather conditions such as temperature, humidity, atmospheric pressure, weather, location and date.</p>
-                    <a href="#"><i class='bx bx-link-external'></i></a>
+                    <h4>Netflix Movie recommender system</h4>
+                    <p>A movie recommender system designed on Netflix UI.</p>
+                    <div class="clickable-links">
+                        <a href="https://netflixmovierecommender.onrender.com/" target="_blank">
+                            <i class='bx bx-link-external'></i>
+                        </a>
+                        <a href="https://github.com/rahulkumarroy477/NetflixMovieRecommender/" target="_blank">
+                            <i class='bx bxl-github'></i>
+                        </a>
+                    </div>
+
+
+
                 </div>
             </div>
             <div class="portfolio-box">
-                <img src="./images/ecommerce-website.jpg" alt="">
+                <video src="./videos/email-summary.mp4" loop muted autoplay></video>
                 <div class="portfolio-layer">
-                    <h4>Ecommerce Website</h4>
-                    <p>A React e-commerce web app is a fast, scalable, and user-friendly e-commerce website that can be built using React.</p>
-                    <a href="https://github.com/rahulkumarroy477/ecommerce-app-ReactJs"><i class='bx bx-link-external'></i></a>
+                    <h4>Email summary generator</h4>
+                    <p>Generates summary of your email and send it to your email.</p>
+                    <div class="clickable-links">
+                        <a href="https://email-summary.onrender.com/" target="_blank">
+                            <i class='bx bx-link-external'></i>
+                        </a>
+                        <a href="https://github.com/rahulkumarroy477/email-summary/" target="_blank">
+                            <i class='bx bxl-github'></i>
+                        </a>
+                    </div>
+
+
+
                 </div>
             </div>
             <div class="portfolio-box">
-                <img src="./images/chat-app.jpg" alt="">
+                <video src="./videos/dummy-data.mp4" loop muted autoplay></video>
                 <div class="portfolio-layer">
-                    <h4>Social Media App</h4>
-                    <p>A social media app built with React can be used to create a platform for users to connect with each other. It can include features such as user authentication, user profiles, messaging, and more.</p>
-                    <a href="#"><i class='bx bx-link-external'></i></a>
+                    <h4>Dummy data generator</h4>
+                    <p>Generates dummy data for your Api testing purposes.</p>
+                    <div class="clickable-links">
+                        <a href="https://dummydatagenerator.onrender.com/" target="_blank">
+                            <i class='bx bx-link-external'></i>
+                        </a>
+                        <a href="https://github.com/rahulkumarroy477/dummyDataGenerator/" target="_blank">
+                            <i class='bx bxl-github'></i>
+                        </a>
+                    </div>
+
+
+
                 </div>
             </div>
+
             <div class="portfolio-box">
-                <img src="./images/quiz-app.png" alt="">
+                <video src="./videos/netflix-movie-recommender.mp4" loop muted autoplay></video>
                 <div class="portfolio-layer">
                     <h4>Quiz App</h4>
-                    <p>A quiz app built with React can be used to create a platform for users to take quizzes on various topics. It can include features such as user authentication, quiz creation, quiz taking, and more.</p>
+                    <p>A quiz app built with React can be used to create a platform for users to take quizzes on various
+                        topics. It can include features such as user authentication, quiz creation, quiz taking, and
+                        more.</p>
                     <a href="https://github.com/rahulkumarroy477/quiz-app"><i class='bx bx-link-external'></i></a>
                 </div>
             </div>
             <div class="portfolio-box">
-                <img src="./images/recipe-app.png" alt="">
+                <video src="./videos/netflix-movie-recommender.mp4" loop muted autoplay></video>
                 <div class="portfolio-layer">
                     <h4>Recipe App</h4>
-                    <p>A recipe app built with React can be used to create a platform for users to search for and save recipes. It can include features such as user authentication, recipe search, recipe creation, and more.</p>
+                    <p>A recipe app built with React can be used to create a platform for users to search for and save
+                        recipes. It can include features such as user authentication, recipe search, recipe creation,
+                        and more.</p>
                     <a href="#"><i class='bx bx-link-external'></i></a>
                 </div>
             </div>
             <div class="portfolio-box">
-                <img src="./images/todo-list.jpeg" alt="">
+                <video src="./videos/netflix-movie-recommender.mp4" loop muted autoplay></video>
                 <div class="portfolio-layer">
                     <h4>Todo list</h4>
-                    <p>A todo list app built with React can be used to create a platform for users to create and manage their to-do lists. It can include features such as user authentication, task creation, task management, and more.</p>
+                    <p>A todo list app built with React can be used to create a platform for users to create and manage
+                        their to-do lists. It can include features such as user authentication, task creation, task
+                        management, and more.</p>
                     <a href=" https://rahulkumarroy477.github.io/todolist"><i class='bx bx-link-external'></i></a>
                 </div>
             </div>
@@ -147,18 +214,18 @@
     <!-- Contact section design -->
     <section class="contact" id="contact">
         <h2 class="heading">Contact <span>Me!</span></h2>
-        <form action="#">
+        <div id="form">
             <div class="input-box">
-                <input type="text" placeholder="Full Name"/>
-                <input type="email" placeholder="Email Address"/>
+                <input type="text" placeholder="Full Name" id="fullName" required />
+                <input type="email" placeholder="Email Address" id="email_id" required />
             </div>
             <div class="input-box">
-                <input type="number" placeholder="Mobile Number"/>
-                <input type="text" placeholder="Email subject"/>
+                <input type="number" placeholder="Mobile Number" id="phone" required />
+                <input type="text" placeholder="Email subject" id="subject" required />
             </div>
-            <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
-            <input type="submit" value="Send Message" class="btn">
-        </form>
+            <textarea name="" id="message" cols="30" rows="10" placeholder="Your Message" required></textarea>
+            <button type="submit" onclick="sendEmail()" class="btn">Send Message</button>
+        </div>
     </section>
 
     <!-- footer design -->
@@ -179,4 +246,5 @@
     <!-- custom js -->
     <script src="./js/script.js"></script>
 </body>
+
 </html>
