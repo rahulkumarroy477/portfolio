@@ -1,7 +1,7 @@
 let menuIcon = document.querySelector('#menu-icon');
 let navbar = document.querySelector('.navbar');
 
-menuIcon.onclick = ()=>{
+menuIcon.onclick = () => {
     menuIcon.classList.toggle('bx-x');
     navbar.classList.toggle('active');
 }
@@ -9,18 +9,18 @@ menuIcon.onclick = ()=>{
 let sections = document.querySelectorAll('section');
 let navLinks = document.querySelectorAll('header nav a');
 
-window.onscroll=()=>{
-    sections.forEach(sec =>{
+window.onscroll = () => {
+    sections.forEach(sec => {
         let top = window.scrollY;
-        let offset = sec.offsetTop-150;
+        let offset = sec.offsetTop - 150;
         let height = sec.offsetHeight;
 
         let id = sec.getAttribute('id');
 
-        if(top>=offset && top<offset+height){
-            navLinks.forEach(links=>{
+        if (top >= offset && top < offset + height) {
+            navLinks.forEach(links => {
                 links.classList.remove('active');
-                document.querySelector('header nav a[href*='+id+']').classList.add('active');
+                document.querySelector('header nav a[href*=' + id + ']').classList.add('active');
             });
         }
     });
@@ -28,18 +28,18 @@ window.onscroll=()=>{
     // sticky navbar
 
     let header = document.querySelector('header');
-    header.classList.toggle('sticky',window.scrollY>100);
+    header.classList.toggle('sticky', window.scrollY > 100);
 
     // remove toggle and navbar when click on navbar link
 
     navbar.classList.remove('bx-x');
     navbar.classList.remove('active');
 }
-ScrollReveal({ 
+ScrollReveal({
     reset: true,
     distance: '80px',
-    duration:2000,
-    delay:200
+    duration: 2000,
+    delay: 200
 });
 ScrollReveal().reveal('.home-content,.heading', { origin: 'top' });
 ScrollReveal().reveal('.home-img, .services-container, .portfolio-box, #form', { origin: 'bottom' });
@@ -48,23 +48,10 @@ ScrollReveal().reveal('.home-content p, .about-content', { origin: 'right' });
 
 // typed js
 var typed = new Typed('.multiple-text', {
-    strings: ['Frontend Developer!', 'Backend Developer','Mern Developer'],
-    typeSpeed:100,
-    backSpeed:100,
-    backDelay:1000,
-    loop:true
-  });
+    strings: ['Frontend Developer!', 'Backend Developer', 'Mern Developer'],
+    typeSpeed: 100,
+    backSpeed: 100,
+    backDelay: 1000,
+    loop: true
+});
 
-function sendEmail(){
-    var params = {
-        from_name : document.getElementById('fullName').value,
-        email: document.getElementById('email').value,
-        phone: document.getElementById('phone').value,
-        subject: document.getElementById('subject').value,
-        message: document.getElementById('message').value
-    }
-    emailjs.send("service_vx7ji9w","template_1isf9sg",params)
-    .then(()=>{
-        alert("success");
-    });
-}
