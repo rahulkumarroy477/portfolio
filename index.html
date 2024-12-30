@@ -10,13 +10,8 @@
 
     <!-- custom css -->
     <link rel="stylesheet" href="./css/style.css">
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
     </script>
-    <script type="text/javascript">
-        (function () {
-            emailjs.init("NwpA4jkED6sPJYztT");
-        })();
-    </script>
+
     <title>Portfolio</title>
     <link rel="icon" href="./images/profile-photo-rahul.jpg" style="border-radius: 50%;" type="image/x-icon">
 </head>
@@ -30,6 +25,7 @@
             <a href="#about">About</a>
             <a href="#services">Services</a>
             <a href="#portfolio">Portfolio</a>
+            <a href="#contact">Contact</a>
         </nav>
     </header>
 
@@ -43,10 +39,10 @@
                 according to different situation
                 which makes me flexible in working in differnet environment and different tech stacks.</p>
             <div class="social-media">
-                <a href="https://github.com/rahulkumarroy477/"><i class='bx bxl-github'></i></a>
-                <a href="https://www.facebook.com/rahulnitpian25/"><i class='bx bxl-facebook'></i></a>
-                <a href="https://www.instagram.com/itzz_only_rahul/"><i class='bx bxl-instagram-alt'></i></a>
-                <a href="https://www.linkedin.com/in/rahul-kumar-66359b237/"><i class='bx bxl-linkedin'></i></a>
+                <a target="_blank" href="https://github.com/rahulkumarroy477/"><i class='bx bxl-github'></i></a>
+                <a target="_blank" href="https://www.facebook.com/rahulnitpian25/"><i class='bx bxl-facebook'></i></a>
+                <a target="_blank" href="https://www.instagram.com/itzz_only_rahul/"><i class='bx bxl-instagram-alt'></i></a>
+                <a target="_blank" href="https://www.linkedin.com/in/rahul-kumar-66359b237/"><i class='bx bxl-linkedin'></i></a>
             </div>
             <a href="./docs/myResume.pdf" class="btn" download>Download CV</a>
         </div>
@@ -135,9 +131,6 @@
                             <i class='bx bxl-github'></i>
                         </a>
                     </div>
-
-
-
                 </div>
             </div>
             <div class="portfolio-box">
@@ -153,9 +146,6 @@
                             <i class='bx bxl-github'></i>
                         </a>
                     </div>
-
-
-
                 </div>
             </div>
             <div class="portfolio-box">
@@ -177,21 +167,25 @@
     </section>
 
     <!-- Contact section design -->
-    <!-- <section class="contact" id="contact">
+    <section class="contact" id="contact">
         <h2 class="heading">Contact <span>Me!</span></h2>
-        <div id="form">
+        <form method="POST" id="form">
+            <input type="hidden" name="access_key" value="77b3b680-a19f-4e92-899d-8aba505920e9">
             <div class="input-box">
-                <input type="text" placeholder="Full Name" id="fullName" required />
-                <input type="email" placeholder="Email Address" id="email_id" required />
+                <input type="text" placeholder="Full Name" id="fullName" name="name" required />
+                <input type="email" placeholder="Email Address" id="email_id" name="email" required />
             </div>
             <div class="input-box">
-                <input type="number" placeholder="Mobile Number" id="phone" required />
-                <input type="text" placeholder="Email subject" id="subject" required />
+                <input type="number" placeholder="Mobile Number" id="phone" name="phone" required />
+                <input type="text" placeholder="Email subject" id="subject" name="subject" required />
             </div>
-            <textarea name="" id="message" cols="30" rows="10" placeholder="Your Message" required></textarea>
-            <button type="submit" class="btn">Send Message</button>
-        </div>
-    </section> -->
+            <textarea name="message" id="message" cols="30" rows="10" placeholder="Your Message" required></textarea>
+            <!-- Honeypot Spam Protection -->
+            <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+            <button type="submit" class="btn" id="submit-btn">Send Message</button>
+            <div id="result"></div>
+        </form>
+    </section>
 
     <!-- footer design -->
 
@@ -210,6 +204,7 @@
     <script src="https://unpkg.com/scrollreveal"></script>
     <!-- custom js -->
     <script src="./js/script.js"></script>
+    <script src="./js/validateForm.js"></script>
 </body>
 
 </html>
