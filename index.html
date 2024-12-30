@@ -28,7 +28,6 @@
             <a href="#contact">Contact</a>
         </nav>
     </header>
-
     <section class="home" id="home">
         <div class="home-content">
             <h3>Hello, It's Me</h3>
@@ -187,6 +186,22 @@
         </form>
     </section>
 
+    <!-- Bubble button -->
+    <div class="bubble" onclick="openDialog()">💬</div>
+
+    <!-- Dialog box -->
+    <div id="dialog" class="dialog">
+        <span class="close-btn" onclick="closeDialog()">X</span>
+        <iframe src="./chatbot/index.html" frameborder="0"></iframe>
+        <!-- <div class="dialog-content">
+            <h3>Chat with me!</h3>
+            <div id="messages" class="messages"></div>
+            <form id="chat-form" class="input-container">
+                <input type="text" id="message-input" placeholder="Type a message..." />
+                <button type="submit">Send</button>
+            </form>
+        </div> -->
+    </div>
     <!-- footer design -->
 
     <footer class="footer">
@@ -205,6 +220,7 @@
     <!-- custom js -->
     <script src="./js/script.js"></script>
     <script src="./js/validateForm.js"></script>
+    <script src="./js/chatbot.js"></script>
 </body>
 
 </html>

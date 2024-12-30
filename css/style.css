@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Poppins:wght@500;600;700;800;900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600&display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -12,6 +12,10 @@
 }
 
 :root {
+    --font-family: 'Space Grotesk', sans-serif;
+    --main-background-color: #FFFDD0;
+    --border-color: #000000;
+    --background-color: #333;
     --bg-color: #1f242d;
     --second-bg-color: #323946;
     --text-color: #fff;
@@ -114,6 +118,119 @@ section {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+/* Bubble Styles */
+.bubble {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #ff6347;
+    color: white;
+    border-radius: 50%;
+    padding: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 9999; /* Ensure the bubble is on top */
+}
+
+/* Dialog Box Styles */
+.dialog {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 400px;
+    height: 400px;
+    z-index: 9999; /* Ensure the dialog is on top */
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Dialog content styles */
+.dialog-content {
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.messages {
+    max-height: 300px;
+    overflow-y: scroll; 
+    margin-bottom: 20px;
+}
+
+.messages::-webkit-scrollbar {
+    width: 0; 
+    height: 0; 
+}
+
+
+.messages .user-message, .messages .bot-message {
+    font-size: 15px;
+    text-align: left;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 5px 0;
+    max-width: 80%;
+}
+
+.user-message {
+    background-color: var(--second-bg-color);
+    align-self: flex-start;
+
+}
+
+.bot-message {
+    background-color: #ff6347;
+    align-self: flex-end;
+}
+
+/* Input container */
+.input-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+#message-input {
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 80%;
+    padding: 10px;
+    font-size: 14px;
+}
+
+.input-container button {
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+#dialog iframe {
+    width: 100%;
+    height: 100%;
+    border: none; /* Remove default border around iframe */
 }
 
 @keyframes floatImage{
